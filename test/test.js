@@ -20,6 +20,12 @@ describe("Pharse", function () {
       let mixedCase = new Phrase("Racecar");
       assert(mixedCase.palindrome());
     });
+
+    it("should return false for a empty string", function(){
+      let emptyPhrase = new Phrase("");
+      assert(!emptyPhrase.palindrome());
+    });
+
   
   describe("#letters", function(){
     it("should return true for a palindrome with punctuation", function(){
@@ -31,7 +37,8 @@ describe("Pharse", function () {
       let noLetters = new Phrase("1234.56");
       assert.strictEqual(noLetters.letters(), "");
     });
-
+  
+ 
 
   });
 
